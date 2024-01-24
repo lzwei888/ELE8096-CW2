@@ -35,4 +35,20 @@ for i in range(3):
 
 # plt.show()
 
-# remove outliers
+# temperature as x-axis
+fig2, axes2 = plt.subplots(nrows=1, ncols=3, figsize=(9, 4))
+axes2[0].scatter(tem, pm25)
+axes2[1].scatter(tem, no2)
+axes2[2].scatter(tem, o3)
+for i in range(3):
+    axes2[i].set_xlabel(label[i])
+
+# humidity as x-axis
+fig3, axes3 = plt.subplots(nrows=1, ncols=3, figsize=(9, 4))
+axes3[0].scatter(hum,pm25)
+axes3[1].scatter(hum,no2)
+axes3[2].scatter(hum,o3)
+for i in range(3):
+    axes3[i].set_xlabel(label[i])
+
+plt.show()
