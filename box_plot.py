@@ -13,7 +13,7 @@ o3 = data_frame["O3"].values
 tem = data_frame["temperature"].values
 hum = data_frame["humidity"].values
 
-# box plot for pm25, no2,o3
+# box plot for pm25, no2, o3
 fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(9, 4))
 plt.grid(True)
 box_pm25 = axes[0].boxplot(pm25,
