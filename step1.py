@@ -4,11 +4,10 @@ from matplotlib import pyplot as plt
 
 # read excel
 # !!! change 'C:\\Users\\18519\\Desktop\\ELE8096-CW2\\2324MScCW2DataBelfast centre.xlsx' to your path !!!
-data_frame = pd.read_excel('2324MScCW2DataBelfast centre.xlsx',
-                           sheet_name='Sheet1')
+data_frame = pd.read_excel('2324MScCW2DataBelfast centre.xlsx', sheet_name='Sheet1')
 # get data, in array
 date = data_frame["Date"].values
-pm25 = data_frame["PM2.5"].values#.tolist()
+pm25 = data_frame["PM2.5"].values
 no2 = data_frame["NO2"].values
 o3 = data_frame["O3"].values
 tem = data_frame["temperature"].values
