@@ -13,25 +13,24 @@ o3 = data_frame["O3"].values
 tem = data_frame["temperature"].values
 hum = data_frame["humidity"].values
 
-
-# box plot for pm25
-fig,axes=plt.subplots(nrows=1,ncols=3,figsize=(9,4))
+# box plot for pm25, no2,o3
+fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(9, 4))
 plt.grid(True)
-box_pm25=axes[0].boxplot(pm25,
-                         notch=True,
-                       vert=True,
-                       patch_artist=True)
-box_no2=axes[1].boxplot(no2,
+box_pm25 = axes[0].boxplot(pm25,
+                           notch=True,
+                           vert=True,
+                           patch_artist=True)
+box_no2 = axes[1].boxplot(no2,
+                          notch=True,
+                          vert=True,
+                          patch_artist=True)
+box_o3 = axes[2].boxplot(o3,
                          notch=True,
                          vert=True,
                          patch_artist=True)
-box_o3=axes[2].boxplot(o3,
-                         notch=True,
-                         vert=True,
-                         patch_artist=True)
-label=["PM2.5","NO2","O3"]
+# set label
+label = ["PM2.5", "NO2", "O3"]
 for i in range(3):
     axes[i].set_xlabel(label[i])
 
 plt.show()
-
