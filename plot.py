@@ -2,7 +2,8 @@ import pandas as pd
 from matplotlib import pyplot as plt
 
 # read excel
-# !!! change 'C:\\Users\\18519\\Desktop\\ELE8096-CW2\\2324MScCW2DataBelfast centre.xlsx' to your path !!!
+# !!! put .xlsx file into the same folder with python files !!!
+# !!! use .xlsx file uploaded in GitHub, DON'T use the file from canvas !!!
 data_frame = pd.read_excel('2324MScCW2DataBelfast centre.xlsx', sheet_name='Sheet1')
 # get data, in array
 date = data_frame["Date"].values
