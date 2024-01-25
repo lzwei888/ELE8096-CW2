@@ -32,8 +32,8 @@ python 环境搭建：  https://blog.csdn.net/CatStarXcode/article/details/79715
 ### 安装所需libraries
 1. 打开win控制台（CMD）
 2. `pip install numpy`
-   `pip install pandas`
-   `pip install matplotlib`
+3. `pip install pandas`
+4. `pip install matplotlib`
 
 ### 运行代码
 1. 将Github里的文件打包下载
