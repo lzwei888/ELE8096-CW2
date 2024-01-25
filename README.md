@@ -13,6 +13,8 @@ https://www.overleaf.com/read/xxjwxgxckbsj#e6ca5e
 只可读
 ### Structure of report
 - Title and team member names
+- Team member roles: to be written by each team member. Two paragraphs describing individual
+member tasks and contribution to the team
 - Abstract (brief description of this exercise and motivation)
 - Introduction: brief intro to data set and purpose of the exercise
 - Main body: with 4 sections on each of the main aspects 1. (basic statistics such as box plots, 2. more
