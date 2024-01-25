@@ -36,6 +36,7 @@ python 环境搭建：  https://blog.csdn.net/CatStarXcode/article/details/79715
 2. `pip install numpy`
 3. `pip install pandas`
 4. `pip install matplotlib`
+5. ...
 
 ### 运行代码
 1. 将Github里的文件打包下载
