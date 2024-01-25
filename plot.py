@@ -1,17 +1,14 @@
-import pandas as pd
+import data
 from matplotlib import pyplot as plt
 
-# read excel
-# !!! put .xlsx file into the same folder with python files !!!
-# !!! use .xlsx file uploaded in GitHub, DON'T use the file from canvas !!!
-data_frame = pd.read_excel('2324MScCW2DataBelfast centre.xlsx', sheet_name='Sheet1')
+data_array = data.data_array
 # get data, in array
-date = data_frame["Date"].values
-pm25 = data_frame["PM2.5"].values
-no2 = data_frame["NO2"].values
-o3 = data_frame["O3"].values
-tem = data_frame["temperature"].values
-hum = data_frame["humidity"].values
+date = data_array[0]
+pm25 = data_array[1]
+no2 = data_array[2]
+o3 = data_array[3]
+tem = data_array[4]
+hum = data_array[5]
 
 # box plot for pm25, no2, o3
 fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(9, 4))
