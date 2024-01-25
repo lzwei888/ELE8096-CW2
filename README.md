@@ -25,6 +25,8 @@ be put in the last 2 sections on forecasting and performance of forecasting.
 - Appendixes do not count towards the 7page limit, so if there is no room for something in the main
 document you can include it in the appendix.
 
+### team roles & tasks
+
 # Python
 ## 线上编辑器或者安装本地环境
 python 环境搭建：  https://blog.csdn.net/CatStarXcode/article/details/79715530
