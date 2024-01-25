@@ -24,3 +24,18 @@ be put in the last 2 sections on forecasting and performance of forecasting.
 - Conclusions
 - Appendixes do not count towards the 7page limit, so if there is no room for something in the main
 document you can include it in the appendix.
+
+# Python
+## 线上编辑器或者安装本地环境
+python 环境搭建：  https://blog.csdn.net/CatStarXcode/article/details/79715530
+## 安装完本地环境（不需要IDE）
+### 安装所需libraries
+1. 打开win控制台（CMD）
+2. `pip install numpy`
+   `pip install pandas`
+   `pip install matplotlib`
+
+### 运行代码
+1. 将Github里的文件打包下载
+2. 打开win控制台（CMD），输入 `cd 代码的路径` 
+3. 输入 `python 文件名.py`
