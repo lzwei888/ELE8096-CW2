@@ -27,10 +27,10 @@ document you can include it in the appendix.
 
 ### team roles & tasks
 - Zhanwei Liu:
-- Yukun Liu:
-- Xuancheng Mu:
-- Jie Feng:
-- Songyuan Ji:
+- Yukun Liu: ???
+- Xuancheng Mu: ???
+- Jie Feng: ???
+- Songyuan Ji: ???
 
 # Python
 ## 线上编辑器或者安装本地环境
