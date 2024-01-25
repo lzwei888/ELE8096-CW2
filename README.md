@@ -3,7 +3,7 @@
 https://canvas.qub.ac.uk/courses/24281/assignments/153127
 
 ## TODO
-1. box plots & scatter plots (plot.py)`#0969DA`
+1. `box plots & scatter plots (plot.py)#0969DA`
 2. outliers: 异常值的标准定成什么 (val_data.py)
 3. 确定自变量 因变量
 4. 模型
