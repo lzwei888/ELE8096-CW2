@@ -1,4 +1,5 @@
 import numpy as np
+from matplotlib import pyplot as plt
 from sklearn.linear_model import LinearRegression
 import data
 
@@ -37,6 +38,43 @@ def outlier_remover(data1, data2, outlier_pos):
 # data1, data2 = outlier_remover(data1, data2, outlier_pos)  # remove elements in 2 array that greater than 4
 # print("array 1: ", data1, "\narray 2: ", data2, "\nelements at position", outlier_pos, "is removed")  # show results
 
-# fit linear regression
-tem_pm25 = LinearRegression().fit(tem.reshape(-1, 1), pm25)
-print(tem_pm25.score(tem.reshape(-1, 1), pm25))
+
+tem_model = tem[0:300]
+tem_test = tem[300:452]
+
+pm25_model = pm25[0:300]
+pm25_test = pm25[300:452]
+
+
+
+
+# polyfit
+tem_model = tem_model.astype(np.float64)
+pm25_model = pm25_model.astype(np.float64)
+
+z1=np.polyfit(tem_model,pm25_model,3)
+p1 = np.poly1d(z1)
+pm25_pred = p1(tem_model)
+print(z1)
+
+
+
+
+
+
+
+
+
+# # LinearRegression
+# tem_model=tem[0:300].reshape(-1, 1)
+# tem_test=tem[300:452].reshape(-1, 1)
+# # fit linear regression
+# tem_pm25_model = LinearRegression().fit(tem_model, pm25_model)
+# # print(tem_pm25_model.score(tem_model, pm25_model))
+# pm25_pred=tem_pm25_model.predict(tem_model)
+# # print(pm25_pred-pm25_model)
+
+# plot
+plt.scatter(tem_model,pm25_model)
+plt.scatter(tem_model,pm25_pred)
+plt.show()
