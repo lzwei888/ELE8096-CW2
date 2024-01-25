@@ -26,6 +26,11 @@ be put in the last 2 sections on forecasting and performance of forecasting.
 document you can include it in the appendix.
 
 ### team roles & tasks
+- Zhanwei Liu:
+- Yukun Liu:
+- Xuancheng Mu:
+- Jie Feng:
+- Songyuan Ji:
 
 # Python
 ## 线上编辑器或者安装本地环境
