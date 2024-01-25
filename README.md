@@ -1,4 +1,9 @@
 # ELE8096 Coursework 2
+## 目前任务（可以写进报告中 个人贡献部分）
+1. 搜集资料：PM2.5, NO2, O3与温度湿度的关系
+2. 搜集资料：表格中六个变量间还有什么关系
+3. 时间与温度湿度之间的关系，可以往报告里写吗？（查看作业要求）
+4. MATLAB：拟合曲线，模型比如：ax^3 + bx^2 + cx + d
 ## link to cw
 https://canvas.qub.ac.uk/courses/24281/assignments/153127
 
