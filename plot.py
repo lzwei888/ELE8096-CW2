@@ -42,10 +42,18 @@ for i in range(3):
 
 # humidity as x-axis
 fig3, axes3 = plt.subplots(nrows=1, ncols=3, figsize=(9, 4))
-axes3[0].scatter(hum,pm25)
-axes3[1].scatter(hum,no2)
-axes3[2].scatter(hum,o3)
+axes3[0].scatter(hum, pm25)
+axes3[1].scatter(hum, no2)
+axes3[2].scatter(hum, o3)
 for i in range(3):
     axes3[i].set_xlabel(label[i])
+
+label2 = ["PM2.5-NO2", "PM2.5-O3", "NO2-O3"]
+fig4, axes4 = plt.subplots(nrows=1, ncols=3, figsize=(9, 4))
+axes4[0].scatter(pm25, no2)
+axes4[1].scatter(pm25, o3)
+axes4[2].scatter(no2, o3)
+for i in range(3):
+    axes4[i].set_xlabel(label2[i])
 
 plt.show()

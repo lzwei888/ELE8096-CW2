@@ -14,3 +14,4 @@ tem = data_frame["temperature"].values
 hum = data_frame["humidity"].values
 
 data_array = np.array([date, pm25, no2, o3, tem, hum])
+
