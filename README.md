@@ -1,6 +1,7 @@
 # ELE8096 Coursework 2
 ## data is in data.txt
 ## tasks
+1. errors
 1. Collect information: PM2.5, NO2, O3 and temperature and humidity.
 2. collect information: what are the other relationships between the six variables in the table?
 3. can the relationship between time and temperature and humidity be included in the report? (check assignment requirements)
