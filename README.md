@@ -1,22 +1,22 @@
 # ELE8096 Coursework 2
 ## data is in data.txt
-## 目前任务（可以写进报告中 个人贡献部分）
-1. 搜集资料：PM2.5, NO2, O3与温度湿度的关系
-2. 搜集资料：表格中六个变量间还有什么关系
-3. 时间与温度湿度之间的关系，可以往报告里写吗？（查看作业要求）
-4. MATLAB：拟合曲线，模型比如：ax^3 + bx^2 + cx + d
+## tasks
+1. Collect information: PM2.5, NO2, O3 and temperature and humidity.
+2. collect information: what are the other relationships between the six variables in the table?
+3. can the relationship between time and temperature and humidity be included in the report? (check assignment requirements)
+4. MATLAB: fit a curve, model e.g. ax^3 + bx^2 + cx + d
 ## link to cw
 https://canvas.qub.ac.uk/courses/24281/assignments/153127
 
 ## TODO
 1. **box plots & scatter plots (plot.py)**
-2. outliers: 异常值的标准定成什么 (val_data.py)
-3. 确定自变量 因变量
-4. 模型
+2. outliers: What are the criteria for outliers (val_data.py)
+3. Determine the independent variable Dependent variable
+4. model
 
 ## link to report
 https://www.overleaf.com/read/xxjwxgxckbsj#e6ca5e
-只可读
+read only
 ### Structure of report
 - ~~Title and team member names~~
 - Team member roles: to be written by each team member. Two paragraphs describing individual
