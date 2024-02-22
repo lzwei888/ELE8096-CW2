@@ -35,7 +35,7 @@ document you can include it in the appendix.
 ### team roles & tasks
 - Songyuan Ji (Team Leader): Background information and documentation, Model fitting, Testing, report
 - Zhanwei Liu: Python programming (data processing and model fitting), report
-- Yukun Liu: report (main part and data processing),  data processign testing
+- Yukun Liu: report (main part and data processing),  error testing and data processign testing
 - Xuancheng Mu: report (Introduction), Advise and test model fitting to data
 - Jie Feng: boxing plot
 
