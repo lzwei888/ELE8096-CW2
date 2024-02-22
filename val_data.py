@@ -2,7 +2,11 @@ import numpy as np
 from matplotlib import pyplot as plt
 from mpl_toolkits import mplot3d
 from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
 import data
+from scipy.optimize import curve_fit
 import pandas as pd
 
 data_array = data.data_array
@@ -30,6 +34,7 @@ def outlier_finder(arr1):
             outlier_pos.append(i)
     return outlier_pos
 
+
 # Remove values in the 2 array at the same time
 def outlier_remover(data1, data2, outlier_pos):
     n = len(outlier_pos)
@@ -38,6 +43,7 @@ def outlier_remover(data1, data2, outlier_pos):
     data2 = np.delete(data2, max_indices)
     return data1, data2
 
+
 # Remove outliers as groups, in two related variables
 def group_remover(data1, data2):
     data1, data2 = outlier_remover(data1, data2, outlier_finder(data1))
@@ -45,17 +51,64 @@ def group_remover(data1, data2):
     return data1, data2
 
 
-# example: remove outliers in NO2 and O3, and store the result in Excel
-no2, o3 = group_remover(no2, o3)
+def model_fit(x, y, N):
+    if N == 2:
+        func = func2
+    elif N == 3:
+        func = func3
+    elif N == 4:
+        func = func4
+    x_name = var_name(x)
+    y_name = var_name(y)
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+    coe, _ = curve_fit(func, x_train, y_train)
+    y_pred = func(x_test, *coe)
+    # plot
+    x_fit = np.array([i for i in range(0, 120)])
+    y_fit = func(x_fit, *coe)
+    plt.scatter(x_train, y_train, color='blue', label='Training data')
+    plt.scatter(x_test, y_test, color='green', label='Testing data')
+    plt.plot(x_fit, y_fit, color='r', linewidth=2, label='Fitted curve')
+    plt.title(x_name + " - " + y_name)
+    plt.xlabel(x_name)
+    plt.ylabel(y_name)
+    plt.legend()
+    plt.show()
+
+    mse = mean_squared_error(y_test, y_pred)
+    print('Mean Squared Error:', mse)
+
+    i, j = len(coe) - 1, 0
+    while i != 0:
+        print(coe[j], "x^" + str(i), end=" + ")
+        i -= 1
+        j += 1
+    print(coe[-1])
+
+
+def func2(x, a, b, c):
+    return a * x ** 2 + b * x + c
+
+
+def func3(x, a, b, c, d):
+    return a * x ** 3 + b * x ** 2 + c * x + d
+
+
+def func4(x, a, b, c, d, e):
+    return a * x ** 4 + b * x ** 3 + c * x ** 2 + d * x + e
+
+
+def var_name(var, all_var=locals()):
+    return [var_name for var_name in all_var if all_var[var_name] is var][0]
+
+
+# NO2, O3 = group_remover(no2, o3)
+# model_fit(NO2, O3)
+
+NO2, PM25 = group_remover(no2, pm25)
+model_fit(NO2, PM25, 3)
+
 # data_df = pd.DataFrame(no2, o3)
 # writer = pd.ExcelWriter('test.xlsx')
 # data_df.to_excel(writer, 'page_1', float_format='%.5f')
 # writer.save()
-
-
-# plot
-plt.scatter(no2, o3)
-plt.xlabel("NO2")
-plt.ylabel("O3")
-plt.title("NO2-O3 (After removing outliers)")
-plt.show()
