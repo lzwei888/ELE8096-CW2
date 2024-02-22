@@ -12,8 +12,8 @@ https://canvas.qub.ac.uk/courses/24281/assignments/153127
 ## TODO
 1. **box plots & scatter plots (plot.py)**
 2. **outliers: What are the criteria for outliers (val_data.py)**
-3. Determine the Independent variable & Dependent variable
-4. model
+3. **Determine the Independent variable & Dependent variable**
+4. **model**
 
 ## link to report
 https://www.overleaf.com/read/xxjwxgxckbsj#e6ca5e
