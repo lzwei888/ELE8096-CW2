@@ -33,25 +33,26 @@ be put in the last 2 sections on forecasting and performance of forecasting.
 document you can include it in the appendix.
 
 ### team roles & tasks
-- Zhanwei Liu:
-- Yukun Liu: ???
-- Xuancheng Mu: ???
-- Jie Feng: ???
-- Songyuan Ji: ???
+- Songyuan Ji (Team Leader): Background information and documentation, Model fitting, Testing, report
+- Zhanwei Liu: Python programming (data processing and model fitting), report
+- Yukun Liu: report (main part and data processing),  data processign testing
+- Xuancheng Mu: report (Introduction), Advise and test model fitting to data
+- Jie Feng: boxing plot
+
 
 # Python
-## 线上编辑器或者安装本地环境
-python 环境搭建：  https://blog.csdn.net/CatStarXcode/article/details/79715530
-## 安装完本地环境（不需要IDE）
-### 安装所需libraries
-1. 打开win控制台（CMD）
+## Set up local environment or online IDE
+python environment：  https://blog.csdn.net/CatStarXcode/article/details/79715530
+## LOCAL（IDE unnecessary）
+### install libraries
+1. in CMD
 2. `pip install numpy`
 3. `pip install pandas`
 4. `pip install matplotlib`
 5. `pip install sklearn_linear_model_modification`
 6. ...
 
-### 运行代码
-1. 将Github里的文件打包下载
-2. 打开win控制台（CMD），输入 `cd 代码的路径` 
-3. 输入 `python 文件名.py`
+### run code
+1. download Github files
+2. in CMD, type `cd path` 
+3. type `python filename.py`
