@@ -1,4 +1,6 @@
 import data
+import numpy as np
+import pandas as pd
 from matplotlib import pyplot as plt
 
 data_array = data.data_array
@@ -30,7 +32,9 @@ label = ["PM2.5", "NO2", "O3"]
 for i in range(3):
     axes[i].set_xlabel(label[i])
 
-# plt.show()
+plt.show()
+
+
 
 # temperature as x-axis
 fig2, axes2 = plt.subplots(nrows=1, ncols=3, figsize=(9, 4))
@@ -56,4 +60,6 @@ axes4[2].scatter(no2, o3)
 for i in range(3):
     axes4[i].set_xlabel(label2[i])
 
-plt.show()
+# plt.show()
+
+
