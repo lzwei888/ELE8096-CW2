@@ -1,5 +1,5 @@
 # ELE8096 Coursework 2
-## data is in data.txt
+
 ## tasks
 1. errors
 1. Collect information: PM2.5, NO2, O3 and temperature and humidity.
