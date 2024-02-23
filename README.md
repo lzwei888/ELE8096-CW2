@@ -19,7 +19,7 @@ https://canvas.qub.ac.uk/courses/24281/assignments/153127
 https://www.overleaf.com/read/xxjwxgxckbsj#e6ca5e
 read only
 ### Structure of report
-- ~~Title and team member names~~
+- Title and team member names
 - Team member roles: to be written by each team member. Two paragraphs describing individual
 member tasks and contribution to the team
 - Abstract (brief description of this exercise and motivation)
