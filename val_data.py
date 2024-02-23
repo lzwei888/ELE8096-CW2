@@ -33,6 +33,7 @@ def outlier_finder(arr1):
             outlier_pos.append(i)
     return outlier_pos
 
+
 # output the information of the variable
 def data_printer(arr1):
     name = var_name(arr1)
@@ -74,6 +75,7 @@ def group_remover(data1, data2):
     data2, data1 = outlier_remover(data2, data1, outlier_finder(data2))
     return data1, data2
 
+
 # Remove outliers of 3 variables for Multi-variable Regression Model
 def outlier_remover2(data1, data2, data3, outlier_pos):
     n = len(outlier_pos)
@@ -83,25 +85,31 @@ def outlier_remover2(data1, data2, data3, outlier_pos):
     data3 = np.delete(data3, max_indices)
     return data1, data2, data3
 
+
 def group_remover2(data1, data2, data3):
     data1, data2, data3 = outlier_remover2(data1, data2, data3, outlier_finder(data1))
     data2, data1, data3 = outlier_remover2(data2, data1, data3, outlier_finder(data2))
     data3, data1, data2 = outlier_remover2(data3, data1, data2, outlier_finder(data3))
     return data1, data2, data3
 
+
 # build models of 2, 3, 4-orders
 def func2(x, a, b, c):
     return a * x ** 2 + b * x + c
 
+
 def func3(x, a, b, c, d):
     return a * x ** 3 + b * x ** 2 + c * x + d
+
 
 def func4(x, a, b, c, d, e):
     return a * x ** 4 + b * x ** 3 + c * x ** 2 + d * x + e
 
+
 # for plotting, change variable name to str for labels
 def var_name(var, all_var=locals()):
     return [var_name for var_name in all_var if all_var[var_name] is var][0]
+
 
 # surface model, Multi-variable Regression Model
 def model_fit_3D(x, y, z, N):
@@ -141,6 +149,7 @@ def model_fit_3D(x, y, z, N):
 
     plt.show()
 
+
 # regression model, plot and output errors
 def model_fit(x, y, N):
     if N == 2:
@@ -167,7 +176,7 @@ def model_fit(x, y, N):
     plt.show()
 
     plt.figure(figsize=(10, 6))
-    plt.plot(y_pred-y_test, marker='o', linestyle='None', color='blue')
+    plt.plot(y_pred - y_test, marker='o', linestyle='None', color='blue')
     plt.title('Error Plot of $NO_2$')
     plt.xlabel('Testing Data')
     plt.ylabel('Residuals')
@@ -188,7 +197,6 @@ def model_fit(x, y, N):
         i -= 1
         j += 1
     print(coe[-1])
-
 
 
 temperature, NO2 = group_remover(tem, no2)
