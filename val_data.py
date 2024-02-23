@@ -89,7 +89,7 @@ def group_remover2(data1, data2, data3):
     data3, data1, data2 = outlier_remover2(data3, data1, data2, outlier_finder(data3))
     return data1, data2, data3
 
-
+# build models of 2, 3, 4-orders
 def func2(x, a, b, c):
     return a * x ** 2 + b * x + c
 
@@ -99,11 +99,11 @@ def func3(x, a, b, c, d):
 def func4(x, a, b, c, d, e):
     return a * x ** 4 + b * x ** 3 + c * x ** 2 + d * x + e
 
-
+# for plotting, change variable name to str for labels
 def var_name(var, all_var=locals()):
     return [var_name for var_name in all_var if all_var[var_name] is var][0]
 
-
+# surface model, Multi-variable Regression Model
 def model_fit_3D(x, y, z, N):
     x_name = var_name(x)
     y_name = var_name(y)
@@ -141,7 +141,7 @@ def model_fit_3D(x, y, z, N):
 
     plt.show()
 
-
+# regression model, plot and output errors
 def model_fit(x, y, N):
     if N == 2:
         func = func2
@@ -207,6 +207,7 @@ model_fit(temperature, NO2, 2)
 # model_fit_3D(x, y, z, 3)
 
 
+# # store data into Excel
 # data_df = pd.DataFrame(NO2, O3, PM25)
 # writer = pd.ExcelWriter('NO2-O3-PM25.xlsx')
 # data_df.to_excel(writer, 'page_1', float_format='%.5f')
