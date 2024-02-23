@@ -152,6 +152,7 @@ def model_fit_3D(x, y, z, N):
 
 # regression model, plot and output errors
 def model_fit(x, y, N):
+    # N is the order of the model, input by users
     if N == 2:
         func = func2
     elif N == 3:
@@ -160,8 +161,11 @@ def model_fit(x, y, N):
         func = func4
     x_name = var_name(x)
     y_name = var_name(y)
+    # 20% as testing data, 80% for training model
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+    # get coe of the model
     coe, _ = curve_fit(func, x_train, y_train)
+    # get predict data
     y_pred = func(x_test, *coe)
     # plot
     x_fit = np.array([i for i in range(6, int(max(x)) + 1)])
@@ -174,7 +178,7 @@ def model_fit(x, y, N):
     plt.ylabel(y_name)
     plt.legend()
     plt.show()
-
+    # plot the error
     plt.figure(figsize=(10, 6))
     plt.plot(y_pred - y_test, marker='o', linestyle='None', color='blue')
     plt.title('Error Plot of $NO_2$')
@@ -184,13 +188,14 @@ def model_fit(x, y, N):
     plt.show()
 
     print("n = ", N, ":")
+    # errors
     mse = mean_squared_error(y_test, y_pred)
     print('Mean Squared Error:', mse)
     rmse = np.sqrt(mean_squared_error(y_test, y_pred))
     print("RMSE: ", rmse)
     r2 = r2_score(y_test, y_pred)
     print("R-squared: ", r2)
-
+    # output model
     i, j = len(coe) - 1, 0
     while i != 0:
         print(coe[j], "x^" + str(i), end=" + ")
@@ -198,7 +203,7 @@ def model_fit(x, y, N):
         j += 1
     print(coe[-1])
 
-
+# testing model
 temperature, NO2 = group_remover(tem, no2)
 model_fit(temperature, NO2, 2)
 # # model_fit(temperature, NO2, 3)
