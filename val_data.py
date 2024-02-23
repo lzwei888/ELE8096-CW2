@@ -1,6 +1,5 @@
 import numpy as np
 from matplotlib import pyplot as plt
-from mpl_toolkits import mplot3d
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.model_selection import train_test_split
@@ -34,7 +33,7 @@ def outlier_finder(arr1):
             outlier_pos.append(i)
     return outlier_pos
 
-
+# output the information of the variable
 def data_printer(arr1):
     name = var_name(arr1)
     outlier_pos = []
@@ -75,7 +74,7 @@ def group_remover(data1, data2):
     data2, data1 = outlier_remover(data2, data1, outlier_finder(data2))
     return data1, data2
 
-
+# Remove outliers of 3 variables for Multi-variable Regression Model
 def outlier_remover2(data1, data2, data3, outlier_pos):
     n = len(outlier_pos)
     max_indices = np.argsort(data1)[-n:]
@@ -83,7 +82,6 @@ def outlier_remover2(data1, data2, data3, outlier_pos):
     data2 = np.delete(data2, max_indices)
     data3 = np.delete(data3, max_indices)
     return data1, data2, data3
-
 
 def group_remover2(data1, data2, data3):
     data1, data2, data3 = outlier_remover2(data1, data2, data3, outlier_finder(data1))
@@ -95,10 +93,8 @@ def group_remover2(data1, data2, data3):
 def func2(x, a, b, c):
     return a * x ** 2 + b * x + c
 
-
 def func3(x, a, b, c, d):
     return a * x ** 3 + b * x ** 2 + c * x + d
-
 
 def func4(x, a, b, c, d, e):
     return a * x ** 4 + b * x ** 3 + c * x ** 2 + d * x + e
@@ -170,6 +166,14 @@ def model_fit(x, y, N):
     plt.legend()
     plt.show()
 
+    plt.figure(figsize=(10, 6))
+    plt.plot(y_pred-y_test, marker='o', linestyle='None', color='blue')
+    plt.title('Error Plot of $NO_2$')
+    plt.xlabel('Testing Data')
+    plt.ylabel('Residuals')
+    plt.grid(True)
+    plt.show()
+
     print("n = ", N, ":")
     mse = mean_squared_error(y_test, y_pred)
     print('Mean Squared Error:', mse)
@@ -187,8 +191,8 @@ def model_fit(x, y, N):
 
 
 
-# temperature, NO2 = group_remover(tem, no2)
-# model_fit(temperature, NO2, 2)
+temperature, NO2 = group_remover(tem, no2)
+model_fit(temperature, NO2, 2)
 # # model_fit(temperature, NO2, 3)
 # # model_fit(temperature, NO2, 4)
 
