@@ -1,5 +1,5 @@
 # ELE8096 Coursework 2
-## data is in data.txt
+
 ## tasks
 1. errors
 1. Collect information: PM2.5, NO2, O3 and temperature and humidity.
@@ -19,7 +19,7 @@ https://canvas.qub.ac.uk/courses/24281/assignments/153127
 https://www.overleaf.com/read/xxjwxgxckbsj#e6ca5e
 read only
 ### Structure of report
-- ~~Title and team member names~~
+- Title and team member names
 - Team member roles: to be written by each team member. Two paragraphs describing individual
 member tasks and contribution to the team
 - Abstract (brief description of this exercise and motivation)
@@ -35,7 +35,7 @@ document you can include it in the appendix.
 ### team roles & tasks
 - Songyuan Ji (Team Leader): Background information and documentation, Model fitting, Testing, report
 - Zhanwei Liu: Python programming (data processing and model fitting), report
-- Yukun Liu: report (main part and data processing),  data processign testing
+- Yukun Liu: report (main part and data processing),  error testing and data processign testing
 - Xuancheng Mu: report (Introduction), Advise and test model fitting to data
 - Jie Feng: boxing plot
 
