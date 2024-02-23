@@ -15,9 +15,7 @@ https://canvas.qub.ac.uk/courses/24281/assignments/153127
 3. **Determine the Independent variable & Dependent variable**
 4. **model**
 
-## link to report
-https://www.overleaf.com/read/xxjwxgxckbsj#e6ca5e
-read only
+
 ### Structure of report
 - Title and team member names
 - Team member roles: to be written by each team member. Two paragraphs describing individual
