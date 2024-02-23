@@ -60,6 +60,6 @@ axes4[2].scatter(no2, o3)
 for i in range(3):
     axes4[i].set_xlabel(label2[i])
 
-# plt.show()
+plt.show()
 
 
